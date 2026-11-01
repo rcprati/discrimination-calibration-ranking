@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "Discrimination, Calibration, and Ranking: Lean proofs and experiments"
+authors:
+  - family-names: Prati
+    given-names: Ronaldo C.
+  - family-names: Johari
+    given-names: Farangis
+license: BSD-3-Clause
+repository-code: "https://github.com/rcprati/discrimination-calibration-ranking"

@@ -1,0 +1,16 @@
+,quantity,spearman_with_prevalence,mean_over_labels
+0,nDCG_model,0.9692307692,0.4376748214
+1,nDCG_prior_only,1,0.4008105713
+2,nDCG_normalised,-0.2263736264,0.485668743
+3,AUC_model,0.221978022,0.7017105424
+4,gap_model (AUC-nDCG),-0.7846153846,0.2640357211
+5,gap_normalised (AUC-nDCG),0.8153846154,0.2160417995
+6,"spearman(nDCG_model, nDCG_prior_only)",0.9692307692,
+7,"spearman(nDCG_model, nDCG_normalised)",-0.1252747253,
+8,"spearman(nDCG_normalised, AUC_model)",0.8637362637,
+9,"spearman(nDCG_model, AUC_model)",0.2967032967,
+10,nDCG_oracle (mean over labels),0.6053101215,
+11,"spearman(nDCG_oracle, prevalence)",0.4857142857,
+12,"spearman(nDCG_model / nDCG_oracle, prevalence)",0.9692307692,
+13,max |AUC change| under normalisation,0,
+14,AUC of the prior-only predictor (mean over labels),0.5,
