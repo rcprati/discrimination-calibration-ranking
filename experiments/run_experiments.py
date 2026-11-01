@@ -1141,7 +1141,8 @@ def tie_sensitivity(Y_te, probas, tag):
 
     metrics.py ranks with np.argsort (ties in a row broken by label index) and AUC with
     sklearn (ties count 1/2). The paper's Definition of the rank is min-rank and its concordance
-    fraction counts ties as 0. Random forests output many tied scores, so the conventions differ.
+    fraction counts ties as 1/2; macro_AUC_strict counts them as 0. Random forests (and some
+    boosted-tree columns) output tied scores, so the conventions differ.
     """
     from scipy.stats import rankdata
     n, m = Y_te.shape
