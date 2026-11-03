@@ -44,6 +44,19 @@ python pooled_vs_micro_auc.py    # pooled ROC-AUC against micro-AUC -> data/pool
 python exp_isotonic_murphy.py    # isotonic Murphy terms (needs aggmetrics >= 0.3)
 ```
 
+| Result in the paper | Command (in `experiments/`) | Output |
+|---|---|---|
+| Experiments 1 to 7 (Section 8), including the tie-sensitivity values quoted in Sections 8.1 and 8.2 | `python run_experiments.py` | `figs/exp*.pdf`, `data/exp*.csv`, `data/tie_sensitivity_{emotions,yeast}.csv` |
+| Six-part running example (Section 2 and Appendix A) | `python running_example.py` | `data/running_example.json` |
+| Pooled ROC-AUC against micro-AUC (Section 6.10) | `python pooled_vs_micro_auc.py` | `data/pooled_vs_micro_auc.csv` |
+| Dependent-label AUC counterexample search (Proposition on AUC properness) | `python auc_dependence_search.py` | counts printed to the terminal |
+| Isotonic Murphy terms (Section 8.6) | `python exp_isotonic_murphy.py` (aggmetrics >= 0.3) | `data/exp5b_isotonic_murphy.csv` |
+
+Runtimes on an Apple M3 (8 cores, 8 GB), Python 3.13.9, scikit-learn 1.7.2, NumPy 2.5.2, SciPy 1.16.3,
+pandas 2.3.3, matplotlib 3.10.6: `run_experiments.py` about 100 s, `exp_isotonic_murphy.py` about 85 s, the
+other scripts a few seconds. Rerunning them on 3 November 2026 regenerated every CSV in `data/`
+identically to the stored files (maximum absolute difference 0).
+
 `metrics.py` holds independent numpy implementations of every measure used, so the experiments
 do not depend on the package. Figures are written to `figs/` and the underlying numbers to `data/`.
 
